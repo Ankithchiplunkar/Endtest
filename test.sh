@@ -2,7 +2,7 @@
 hash=$(curl -X GET --header "Accept: */*" "${3}")
 for run in {1.."${4}"}
 do
-  sleep 60
+  sleep 45
   result=$(curl -X GET --header "Accept: */*" "https://app.endtest.io/api.php?action=getResults&appId=${1}&appCode=${2}&hash=${hash}&format=json")
   if [ "$result" == "Test is still running." ]
   then
